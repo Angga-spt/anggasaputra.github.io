@@ -15,9 +15,6 @@ http://jquery.com/
 jQuery Easing
 http://gsgd.co.uk/sandbox/jquery/easing/
 
-HTML5Shiv
-https://github.com/aFarkas/html5shiv
-
 Google Fonts
 https://www.google.com/fonts/
 
