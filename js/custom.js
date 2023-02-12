@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
     }, 200);
 
     $('#myForm').submit(async function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         // console.log(this.elements[0].value);
         // const formData = {
         //   'fname': this.elements[0].value,
