@@ -2,6 +2,8 @@ jQuery(document).ready(function() {
 	"use strict";
 	// Your custom js code goes here.
 	// script header multiple body
+  var mySound;
+  mySound = new Audio("img/CalvinHarris-Feelscut.mp3");
   /*----------------------------------------
 		Import from file others
 	----------------------------------------*/
@@ -10,8 +12,6 @@ jQuery(document).ready(function() {
 
 
   const path = window.location.pathname.replace('/', '').replace('.html', '');
-  var mySound;
-  mySound = new Audio("img/CalvinHarris-Feelscut.mp3");
 
   setTimeout(
     function() {
