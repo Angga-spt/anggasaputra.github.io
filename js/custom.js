@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
         mySound.volume = 0.2
         mySound.play();
       }
-    }, 200);
+    }, 2000);
 
     $('#myForm').submit(async function (e) {
         // e.preventDefault();
