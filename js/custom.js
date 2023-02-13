@@ -28,27 +28,29 @@ jQuery(document).ready(function() {
     }, 200);
 
     $('#myForm').submit(async function (e) {
-        // e.preventDefault();
-        // console.log(this.elements[0].value);
-        // const formData = {
-        //   'fname': this.elements[0].value,
-        //   'lname': this.elements[1].value,
-        //   'email': this.elements[2].value,
-        //   'message': this.elements[3].value
-        // }
-        // console.log(formData)
-        // // const formData = new FormData($('#myForm')).entries()
-        // const response = await fetch('api/email.php', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(formData)
-        // });
+        e.preventDefault();
+        console.log(this.elements[0].value);
+        const formData = {
+          'fname': this.elements[0].value,
+          'lname': this.elements[1].value,
+          'email': this.elements[2].value,
+          'message': this.elements[3].value
+        }
+        console.log(formData)
+        // const formData = new FormData($('#myForm')).entries()
+        const response = await fetch('https://progmin.000webhostapp.com/email.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
 
-        // const result = await response.json();
+        const result = await response.json();
 
-        // if (result.code == 0) {
-          window.location.href = "mailto:saputangga1977@gmail.com?subject=Saya mempunyai ide bagus nih&body="+ this.elements[3].value;
-        // }
+        if (result.code == 0) {
+          window.location.href = "mailto:saputangga1977@gmail.com?subject=Saya mempunyai ide bagus nih&body="+ result.body.message;
+        } else {
+          alert('maaf saat ini website sedang dalam maintenance');
+        }
     });
 
 });
